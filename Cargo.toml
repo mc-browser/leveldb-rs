@@ -27,7 +27,7 @@ fs2 = {optional = true, version = "0.4.3"}
 tokio = { optional = true, features = ["rt", "sync"], version = ">= 1.21" }
 
 [features]
-default = ["fs"]
+default = []
 async = ["tokio"]
 fs = ["errno", "fs2"]
 
