@@ -41,12 +41,12 @@ use std::rc::Rc;
 /// is not concurrent (yet).
 pub struct DB {
     name: PathBuf,
-    path: PathBuf,
+    pub path: PathBuf,
     lock: Option<FileLock>,
 
     internal_cmp: Rc<Box<dyn Cmp>>,
     fpol: InternalFilterPolicy<BoxedFilterPolicy>,
-    opt: Options,
+    pub opt: Options,
 
     mem: MemTable,
     imm: Option<MemTable>,
